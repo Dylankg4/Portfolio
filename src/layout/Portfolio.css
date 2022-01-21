@@ -1,0 +1,9 @@
+img {
+    height: auto;
+    max-width: 50%;
+}
+
+a {
+    text-decoration: none;
+    font-size: 125%;
+}
