@@ -20,6 +20,18 @@ ul {
 .menuButton {
     border: none;
     font-size: 50px;
+    color: #252327;
+    transition: transform ease-in .07s;
+}
+
+.menuButton:hover {
+    text-shadow: 0 0 4px green;
+    transform: scale(1.2);
+    color: black;
+}
+
+.menuButton:active {
+    transform: scale(1);
 }
 
 .show {
@@ -28,7 +40,7 @@ ul {
 }
 
 .hide {
-    transform: translateY(-100%);
+    transform: translateY(-150%);
     transition: transform ease-in 0.4s;
 }
 
@@ -50,10 +62,10 @@ li button {
 
 li button:hover {
     text-decoration: underline 3px;
-    
 }
 
 li button:active {
+    transform: scale(0.95);
     text-decoration: none;
 }
 

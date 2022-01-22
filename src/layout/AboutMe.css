@@ -1,3 +1,7 @@
+p{
+    font-weight: bolder;
+}
+
 p::first-letter {
     font-size: 150%;
 }
