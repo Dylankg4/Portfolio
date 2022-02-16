@@ -1,5 +1,5 @@
-/* Colors- f8f7ff, f7f7f7*/
+/* Colors- f8f7ff, f7f7f7, 001514, 2d3047, 295270*/
 
-* {
-    background-color: #efefef;
+html {
+    background: linear-gradient(#2d3047 20%,#524175 100%);
 }

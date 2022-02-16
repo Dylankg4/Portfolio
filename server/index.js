@@ -34,7 +34,7 @@ app.post("/send_mail", async (req,res)=>{
         })
 
         await transport.sendMail({
-            from: process.env.MAIL_FROM,
+            from: text.email, //process.env.MAIL_FROM,
             to: "test@test.com",
             subject: "test email",
             html: `<div className="email" style="
@@ -45,7 +45,9 @@ app.post("/send_mail", async (req,res)=>{
             font-size: 20px; 
             ">
             <h2>Here is your email!</h2>
-            <p>${text}</p>
+            <p>${text.name}</p>
+            <p>${text.email}</p>
+            <p>${text.message}</p>
         
             <p>All the best, Dylan</p>
             </div>`

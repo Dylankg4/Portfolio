@@ -1,7 +1,35 @@
-p{
-    font-weight: bolder;
+.container {
+    margin: 10%;
 }
 
-p::first-letter {
+.type {
+    display: inline-block;
+}
+
+.name {
+    overflow: hidden;
+    border-right: .15em solid crimson;
+    white-space: nowrap;
+    width: 0;
+    font-size: 3rem;
+    animation: typing 1.5s steps(20, end) forwards, blink .8s infinite;
+}
+
+.about{
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.about::first-letter {
     font-size: 150%;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from { border-color: transparent; }
+    to { border-color: #b91372; }
 }

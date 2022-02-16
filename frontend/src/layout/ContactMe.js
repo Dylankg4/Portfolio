@@ -4,7 +4,18 @@ import './ContactMe.css'
 
 export default function ContactMe(){
     const [ sent, setSent ] = useState(false)
-	const [ text, setText ] = useState("")
+	const [ text, setText ] = useState({
+		name: "",
+		email: "",
+		message: "",
+	})
+
+	const initialFormData = {
+		name: "",
+		email: "",
+		message: "",
+	}
+
 	const handleSend = async (e) => {
 		setSent(true)
 		try {
@@ -14,6 +25,14 @@ export default function ContactMe(){
 		} catch (error) {
 			console.log(error)
 		}
+	}
+
+	const handleChange = (e) =>{
+		setText({
+			...text,
+			[e.target.name]: e.target.value,
+		})
+		console.log(text, e.target.name)
 	}
 
 
@@ -27,15 +46,20 @@ export default function ContactMe(){
                 <img className="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/2048px-LinkedIn_icon_circle.svg.png" alt="LinkedIn logo"></img>
                 
             </div>
+			<div className="email">
+			<h2>Contact me.</h2>
             {!sent ? (
-				<form onSubmit={handleSend}>
-					<input type="text" value={text} onChange={(e) => setText(e.target.value)} />
+				<form className='form' onSubmit={handleSend}>
+					<input name="name" placeholder="Name" value={text.name} onChange={handleChange}></input>
+					<input name="email" placeholder="Email" value={text.email} onChange={handleChange}></input>
+					<textarea type="text" name="message" placeholder="Message" value={text.message} onChange={handleChange} />
 
-					<button>Send Email</button>
+					<button className="formButton">Send Email</button>
 				</form>
 			) : (
 				<h1>Email Sent</h1>
 			)}
+			</div>
             
         </div>
     )

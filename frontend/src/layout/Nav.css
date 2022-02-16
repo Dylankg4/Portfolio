@@ -10,6 +10,8 @@
 ul {
     display: flex;
     justify-content: center;
+    position: absolute;
+    right: 60px;
 }
 
 .menu {
@@ -17,17 +19,54 @@ ul {
     align-items: center;
 }
 
+.github-link {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.github-img {
+    max-width: 50px;
+    height: auto;
+}
+
+.github-img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.linkedin-link {
+    position: absolute;
+    top: 10px;
+    left: 70px;
+}
+
+.linkedin-img {
+    max-width: 50px;
+    height: auto;
+}
+
+.linkedin-img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 .menuButton {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background-color: inherit;
     border: none;
     font-size: 50px;
-    color: #252327;
-    transition: transform ease-in .07s;
+    color: #efefef;
+    transition: transform ease-in;
 }
 
 .menuButton:hover {
-    text-shadow: 0 0 4px green;
-    transform: scale(1.2);
-    color: black;
+    cursor: pointer;
+    text-shadow: 0 0 4px #19647e;
+    transform: scale(1.1);
+    color: #fff;
 }
 
 .menuButton:active {
@@ -49,6 +88,7 @@ li {
 }
 
 li button {
+    background-color: inherit;
     border: none;
     font-size: large;
     font-weight: 900;
@@ -61,6 +101,7 @@ li button {
 }
 
 li button:hover {
+    cursor: pointer;
     text-decoration: underline 3px;
 }
 
@@ -71,18 +112,18 @@ li button:active {
 
 @keyframes buttonColorPalette {
     0% {
-        color: #1e152a;
+        color: #efefef;
     }
     25% {
-        color: #104547;
+        color: #ffc53a;
     }
     50% {
-        color: #548687;
+        color: #f26419;
     }
     75% {
-        color: #b0413e;
+        color: #d72638;
     }
     100% {
-        color: #f26419;
+        color: #b91372;
     }
 }
