@@ -22,11 +22,13 @@ export default function Nav() {
 
             <ul className={action ? "show" : "hide"}>
                 <li><button onClick={()=>history.push('/')}>About me</button></li>
-                <li><button onClick={()=>history.push('/portfolio')}>Portfolio</button></li>
+                <li><button onClick={()=>history.push('/Portfolio')}>Portfolio</button></li>
                 <li><button onClick={()=>history.push('/ContactMe')}>Contact me</button></li>
             </ul>
 
-            <button className="menuButton" onClick={()=> setAction(!action)}><i className="fas fa-bars"></i></button>
+            <button className="menuButton" onClick={()=> setAction(!action)}>
+                <i className="bi bi-list"></i>
+            </button>
         </div>
     )
 }

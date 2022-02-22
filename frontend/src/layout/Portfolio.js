@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import './Portfolio.css'
 
 export default function Portfolio() {
+    const [card, setCard] = useState(0)
+
     const projects = [
         {
             name: 'Restaurant reservation app',
@@ -43,15 +45,15 @@ export default function Portfolio() {
     function projectRender() {
         return (
             <>
-            {
-                projects.map(project=>{
-                    return <div className="project" key={project.name}><h3>{project.name}</h3>
-                    <p>{project.tools}</p>
-                    <p>{project.description}</p>
+                {
+                projects.map((project, idx)=>{
+                    return <div onClick={() => setCard(idx)} className={card === idx ? `project expand`: 'project small'} key={idx}><h3 className="projectTitle">{project.name}</h3>
+                    <p className="projectText">{project.tools}</p>
+                    <p className="projectText">{project.description}</p>
                     <a href={project.link}>Github</a>
                     </div>
                 })
-            }
+                }
             </>
         )
     }
@@ -61,6 +63,7 @@ export default function Portfolio() {
             <div className="link" onClick={()=>window.open('https://github.com/Dylankg4')}>
                 <img className="github" src="https://www.nicepng.com/png/full/52-520535_free-files-github-github-icon-png-white.png" alt='Github logo'></img>
             </div>
+            <h1 className="pageTitle">Portfolio</h1>
             <div className="projects">
             {projectRender()}
             </div>

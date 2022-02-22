@@ -53,11 +53,11 @@ ul {
 
 .menuButton {
     position: absolute;
-    top: 8px;
-    right: 10px;
+    top: -2px;
+    right: 0;
     background-color: inherit;
     border: none;
-    font-size: 50px;
+    font-size: 60px;
     color: #efefef;
     transition: transform ease-in;
 }

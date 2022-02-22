@@ -7,6 +7,7 @@ export default function AboutMe() {
             <div className="type">
                 <h1 className="name">Dylan Gardner - Software Engineer</h1>
             </div>
+            <h1 className="title">About me</h1>
             <p className="about">
                 My name is Dylan Gardner. I am a software engineer developing fullstack web applications with hobbies in game development, education, and art. I have many interests including history, science, and technology.
             </p>

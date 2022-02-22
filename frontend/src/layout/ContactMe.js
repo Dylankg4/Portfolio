@@ -10,13 +10,7 @@ export default function ContactMe(){
 		message: "",
 	})
 
-	const initialFormData = {
-		name: "",
-		email: "",
-		message: "",
-	}
-
-	const handleSend = async (e) => {
+	const handleSend = async () => {
 		setSent(true)
 		try {
 			await axios.post("http://localhost:4000/send_mail", {
@@ -41,13 +35,13 @@ export default function ContactMe(){
     }
 
     return(
-        <div>
+        <div className="contactForm">
             <div className="link" onClick={handleClick}>
                 <img className="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/2048px-LinkedIn_icon_circle.svg.png" alt="LinkedIn logo"></img>
-                
             </div>
+
 			<div className="email">
-			<h2>Contact me.</h2>
+			<h1 className="title">Contact me.</h1>
             {!sent ? (
 				<form className='form' onSubmit={handleSend}>
 					<input name="name" placeholder="Name" value={text.name} onChange={handleChange}></input>

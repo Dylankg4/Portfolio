@@ -25,10 +25,47 @@ html, .page {
 
 .nav {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     width: 100%;
     height: 70px;
 }
+
+.arrow {
+    color: #efefef;
+    font-size: 70px;
+    z-index: 1;
+}
+
+.arrow:hover {
+    color: #b91372;
+    cursor: pointer;
+}
+
+.arrow-name {
+    font-size: large;
+}
+
+.left-arrow {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+}
+
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+}
+
+.dark {
+    color: #576066;
+}
+
+.dark:hover {
+    cursor: default;
+    color: #576066;
+}
+
 
 @media(max-width: 480px){
 
